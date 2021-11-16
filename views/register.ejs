@@ -33,6 +33,17 @@
 							<!-- To make this form functional, sign up at-->
 							<!-- https://startbootstrap.com/solution/contact-forms-->
 							<!-- to get an API token!-->
+
+							<% if(errors != null && errors.length > 0){ %>
+
+							<ul class="list-group">
+								<% for(var i = 0 ; i < errors.length; i++){%>
+								<li class="list-group-item list-group-item-danger">
+									<%=errors[i]%>
+								</li>
+								<%}%>
+							</ul>
+							<%}%>
 							<form
 								id="contactForm"
 								action="/users/register"
@@ -46,6 +57,7 @@
 										name="username"
 										type="text"
 										placeholder="User Name..."
+										value="<%= username%>"
 									/>
 									<label for="name">User Name</label>
 								</div>
@@ -56,6 +68,7 @@
 										name="password"
 										type="password"
 										placeholder="Password"
+										value="<%= password%>"
 									/>
 									<label for="name">Password</label>
 								</div>
