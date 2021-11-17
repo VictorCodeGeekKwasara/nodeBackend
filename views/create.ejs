@@ -46,6 +46,7 @@
 								</div>
 
 								<div class="form-floating">
+										<label for="message">Message</label>
 									<textarea
 										class="form-control"
 										id="body"
@@ -53,7 +54,9 @@
 										placeholder="Enter text..."
 										style="height: 12rem"
 									></textarea>
-									<label for="message">Message</label>
+								
+									<script>$('#body').summernote({placeholder: 'Hello bootstrap 4', tabsize: 2 , height: 200});										
+										</script>
 								</div>
 								<div class="form-floating">
 									<input
